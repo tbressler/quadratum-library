@@ -2,6 +2,7 @@ group 'de.tbressler.quadratum'
 version '0.0.9'
 
 apply plugin: 'java'
+apply plugin: 'maven'
 
 repositories {
     mavenCentral()
