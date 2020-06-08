@@ -1,0 +1,36 @@
+group 'de.tbressler.quadratum'
+version '0.0.9'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+}
+
+dependencies {
+
+    compile group: 'com.google.guava', name: 'guava', version: '19.0'
+
+    // JUnit and tests:
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.9.5'
+
+}
+
+jar {
+
+    manifest {
+        attributes  'Implementation-Title': 'Quadratum Library',
+                    'Implementation-Version': version
+    }
+
+    from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+
+}

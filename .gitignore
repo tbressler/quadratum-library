@@ -1,3 +1,10 @@
+# for better gitignore templates: https://www.gitignore.io/
+
+### Docker ###
+# docker-compose
+.env
+
+### Gradle ###
 .gradle
 /build/
 
@@ -12,3 +19,23 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+
+### Gradle Patch ###
+**/build/
+
+# Built application files
+*.war
+
+# Project files
+*.iml
+.idea
+
+# Windows thumbnail db
+.DS_Store
+
+# Java class files
+*.class
+
+# VScode
+.settings
+.project
